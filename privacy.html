@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy — AI Trading Lab Backups</title>
+  <style>body{max-width:44rem;margin:3rem auto;padding:0 1rem;font:1.1rem/1.6 system-ui,sans-serif;color:#172337}a{color:#1757ad}</style>
+</head>
+<body>
+  <main>
+    <h1>Privacy Policy</h1>
+    <p>AI Trading Lab Backups is a personal integration under development for the owner's private, virtual-only trading research dashboard. This policy describes its intended authorized operation. Google Drive uploads and scheduled backups are not yet enabled.</p>
+    <h2>Google permissions and data</h2>
+    <p>The integration requests the Google Drive <code>drive.file</code> permission to create, read, verify, and manage backup files created through this application. It does not request general access to all Drive files, Gmail, contacts, or calendars.</p>
+    <p>Information used for backup operation includes authorization tokens and metadata for app-created files, such as file IDs, names, sizes, and creation times. Backup contents consist of the owner's experiment inputs, settings, and saved virtual simulation results. Initial testing uses synthetic data only.</p>
+    <h2>Purpose and sharing</h2>
+    <p>Access is used only for the owner's backup, verification, retention, and restoration operations. Google user data is not sold, used for advertising, or used to train AI models. Backup files are not made public by the application.</p>
+    <p>The planned services are Google Drive for encrypted backup storage, GitHub Actions for approved backup and restore jobs, and Neon for the test database. Those providers process information under their own terms and privacy policies. This integration is separate from them.</p>
+    <h2>Protection and retention</h2>
+    <p>Backups are encrypted before upload using authenticated AES-256-GCM encryption. The recovery key is kept separately from Google Drive. Once configured, connection credentials and the automation key will be stored as GitHub Actions secrets; the owner should retain a separate recovery copy of the key in a password manager. Trusted automation necessarily has access to plaintext while exporting or restoring; plaintext is not intended for persistent artifact storage or logs.</p>
+    <p>Retention is limited by available storage and the owner's approved rotation settings. The proposed rotation is seven daily, four weekly, and three monthly recovery points; it is not yet enabled. Only app-created backup files may be removed by a future retention job, after a newer backup has been verified.</p>
+    <h2>Owner control and deletion</h2>
+    <p>The owner can revoke Google access through Google Account settings, disable backup workflows, remove stored integration secrets, and delete app-created files from Drive. Revoking access does not automatically delete existing backup files or database history. Losing the recovery key can make encrypted files unrecoverable.</p>
+    <h2>Contact and policy updates</h2>
+    <p>Use the developer support email displayed on the Google authorization screen for questions or deletion requests. Before any public use or changes in data handling, this policy and the consent configuration must be updated to describe the actual operation.</p>
+    <p><a href="index.html">About AI Trading Lab Backups</a></p>
+  </main>
+</body>
+</html>
